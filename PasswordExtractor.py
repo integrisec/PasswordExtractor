@@ -54,7 +54,7 @@ def extract(input, output, length, lower, upper, number, special):
 
 def main(argv):
     parser = argparse.ArgumentParser(description='Password extractor matching a particular policy.')
-    parser.add_argument('-i', '--input', default='passwords.txt', help='Password input file (newline separated)', required='False')
+    parser.add_argument('-i', '--input', help='Password input file (newline separated)', required='True')
     parser.add_argument('-o', '--output', help='Output file containing matching passwords')
     parser.add_argument('-l', '--length', default=1, type=int, help='Minimum password length')
     parser.add_argument('-a', action='store_true', default=False, help='Password contains lowercase character')
